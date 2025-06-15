@@ -1,0 +1,45 @@
+[2025-06-15 23:45:48,978] INFO [django.utils.autoreload] E:\Projects\Task\teacher_portal\teacher_portal\settings.py changed, reloading.
+[2025-06-15 23:45:49,505] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 23:46:09,990] INFO [django.utils.autoreload] E:\Projects\Task\teacher_portal\teacher_portal\settings.py changed, reloading.
+[2025-06-15 23:46:10,433] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 23:46:11,649] INFO [django.utils.autoreload] E:\Projects\Task\teacher_portal\teacher_portal\settings.py changed, reloading.
+[2025-06-15 23:46:12,308] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 23:46:12,855] INFO [django.server] "GET / HTTP/1.1" 200 3425
+[2025-06-15 23:46:12,868] INFO [django.server] "GET /static/css/login.css HTTP/1.1" 304 0
+[2025-06-15 23:46:13,247] INFO [django.server] "GET / HTTP/1.1" 200 3425
+[2025-06-15 23:46:13,447] INFO [django.server] "GET / HTTP/1.1" 200 3425
+[2025-06-15 23:46:19,645] INFO [django.server] "POST / HTTP/1.1" 302 0
+[2025-06-15 23:46:19,652] INFO [django.server] "GET /home/ HTTP/1.1" 200 8491
+[2025-06-15 23:46:19,675] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 304 0
+[2025-06-15 23:46:37,086] INFO [django.utils.autoreload] E:\Projects\Task\teacher_portal\teacher_portal\settings.py changed, reloading.
+[2025-06-15 23:46:37,511] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 23:48:21,960] INFO [django.utils.autoreload] E:\Projects\Task\teacher_portal\teacher_portal\settings.py changed, reloading.
+[2025-06-15 23:48:22,453] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 23:48:23,670] INFO [django.utils.autoreload] E:\Projects\Task\teacher_portal\teacher_portal\settings.py changed, reloading.
+[2025-06-15 23:48:24,303] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 23:48:26,590] INFO [django.utils.autoreload] E:\Projects\Task\teacher_portal\teacher_portal\settings.py changed, reloading.
+[2025-06-15 23:48:27,014] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 23:48:37,392] INFO [django.utils.autoreload] E:\Projects\Task\teacher_portal\teacher_portal\settings.py changed, reloading.
+[2025-06-15 23:48:37,834] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 23:48:39,062] INFO [django.utils.autoreload] E:\Projects\Task\teacher_portal\teacher_portal\settings.py changed, reloading.
+[2025-06-15 23:48:39,626] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 23:52:44,492] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 00:07:39,032] INFO [django.server] "GET /home/ HTTP/1.1" 200 8491
+[2025-06-16 00:07:39,058] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 304 0
+[2025-06-16 00:07:42,369] INFO [app_logger] [LOGOUT] User 'admin' logged out.
+[2025-06-16 00:07:42,389] INFO [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 00:07:42,389] INFO [django.server] "GET / HTTP/1.1" 200 3425
+[2025-06-16 00:07:42,418] INFO [django.server] "GET /static/css/login.css HTTP/1.1" 304 0
+[2025-06-16 00:08:10,451] INFO [django.server] "GET / HTTP/1.1" 200 3437
+[2025-06-16 00:13:12,021] INFO [django.server] "GET / HTTP/1.1" 200 3514
+[2025-06-16 00:13:12,035] INFO [django.server] "GET /static/css/login.css HTTP/1.1" 304 0
+[2025-06-16 00:13:12,098] INFO [django.server] "GET /static/images/company_logo.jpg HTTP/1.1" 200 5415
+[2025-06-16 00:13:12,633] INFO [django.server] "GET / HTTP/1.1" 200 3514
+[2025-06-16 00:13:30,162] INFO [django.server] "GET / HTTP/1.1" 200 3514
+[2025-06-16 00:13:33,834] INFO [app_logger] [LOGIN SUCCESS] User 'admin' logged in.
+[2025-06-16 00:13:33,840] INFO [django.server] "POST / HTTP/1.1" 302 0
+[2025-06-16 00:13:33,868] INFO [django.server] "GET /home/ HTTP/1.1" 200 8572
+[2025-06-16 00:13:33,888] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 304 0
+[2025-06-16 00:13:40,332] INFO [app_logger] [LOGOUT] User 'admin' logged out.
+[2025-06-16 00:13:40,337] INFO [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 00:13:40,345] INFO [django.server] "GET / HTTP/1.1" 200 3514

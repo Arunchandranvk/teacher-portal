@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - Tailwebs{% endblock %}
+
+{% block content %}
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Mark</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td><span class="initial">{{ student.student.name|slice:":1" }}</span>{{ student.student.name }}</td>
+            <td>{{ student.subject }}</td>
+            <td>{{ student.marks }}</td>
+            <td>
+                <div class="action-menu">
+                    ⬇
+                    <div class="action-menu-content">
+                      <a href="#" onclick="openEditModal('{{ student.uuid }}', '{{ student.student.name }}', '{{ student.subject.id }}', '{{ student.marks }}')">Edit</a>
+                      <a href="#" onclick="deleteMark('{{ student.uuid }}')">Delete</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<button class="btn" onclick="openModal()">Add</button>
+
+<!-- Add Modal -->
+<div id="addModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <form id="addForm">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label>Subject</label>
+                <select name="subject_id" required>
+                    {% for subject in subjects %}
+                    <option value="{{ subject.id }}">{{ subject.subject_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Mark</label>
+                <input type="number" name="marks" required>
+            </div>
+            <button type="submit" class="submit-btn">Add</button>
+        </form>
+        
+    </div>
+</div>
+
+<!-- Edit Modal -->
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeEditModal()">&times;</span>
+    <form id="editForm" method="post">
+      {% csrf_token %}
+      <input type="hidden" id="edit_uuid">
+
+      <label for="edit_name">Name</label>
+      <input type="text" id="edit_name" name="name" class="form-control" required>
+
+      <label for="edit_subject">Subject</label>
+      <select id="edit_subject" name="subject_id" required>
+        {% for subject in subjects %}
+          <option value="{{ subject.id }}">{{ subject.subject_name }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="edit_marks">Marks</label>
+      <input type="number" id="edit_marks" name="marks" required>
+
+      <button type="submit">Update</button>
+    </form>
+  </div>
+</div>
+
+
+<script>
+        document.getElementById('addForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            fetch('', {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'created' || data.status === 'updated') {
+                    showToast(data.message, 'success');
+                    closeModal();
+                    setTimeout(() => location.reload(), 1000);
+                } else {
+                    showToast(data.message, 'error');
+                }
+            })
+            .catch(() => {
+                showToast('Something went wrong.', 'error');
+            });
+        });
+
+
+    function openModal() {
+        document.getElementById('addModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('addModal').style.display = 'none';
+    }
+
+    function openEditModal(uuid, name, subjectId, marks) {
+    document.getElementById('edit_uuid').value = uuid;
+    document.getElementById('edit_name').value = name;
+    document.getElementById('edit_subject').value = subjectId;
+    document.getElementById('edit_marks').value = marks;
+    document.getElementById('editModal').style.display = 'block';
+    }
+
+
+    function closeEditModal() {
+        document.getElementById('editModal').style.display = 'none';
+    }
+
+    window.onclick = function (event) {
+        const addModal = document.getElementById('addModal');
+        const editModal = document.getElementById('editModal');
+        if (event.target === addModal) addModal.style.display = 'none';
+        if (event.target === editModal) editModal.style.display = 'none';
+    }
+
+    document.getElementById('editForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const uuid = document.getElementById('edit_uuid').value;
+        const name = document.getElementById('edit_name').value;
+        const subjectId = document.getElementById('edit_subject').value;
+        const marks = document.getElementById('edit_marks').value;
+
+        fetch(`/student/edit/${uuid}/`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "X-CSRFToken": "{{ csrf_token }}"
+            },
+            body: `name=${encodeURIComponent(name)}&subject_id=${subjectId}&marks=${marks}`
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === 'success') {
+                showToast(data.message, 'success');
+                closeEditModal();
+                setTimeout(() => location.reload(), 1000);
+            } else {
+                showToast(data.message, 'error');
+            }
+        })
+        .catch(() => {
+            showToast('Something went wrong', 'error');
+        });
+    });
+
+
+    function deleteMark(uuid) {
+        fetch(`/student/delete/${uuid}/`, {
+            method: "POST",
+            headers: {
+                "X-CSRFToken": "{{ csrf_token }}"
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === 'success') {
+                showToast(data.message, 'success');
+                setTimeout(() => location.reload(), 1000);
+            } else {
+                showToast(data.message, 'error');
+            }
+        })
+        .catch(() => {
+            showToast('Something went wrong', 'error');
+        });
+    }
+</script>
+{% endblock %}
