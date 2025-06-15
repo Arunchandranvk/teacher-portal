@@ -19,7 +19,9 @@
             <td>{{ student.marks }}</td>
             <td>
                 <div class="action-menu">
-                    ⬇
+                    <span class="material-symbols-outlined">
+                                arrow_circle_down
+                                </span>
                     <div class="action-menu-content">
                       <a href="#" onclick="openEditModal('{{ student.uuid }}', '{{ student.student.name }}', '{{ student.subject.id }}', '{{ student.marks }}')">Edit</a>
                       <a href="#" onclick="deleteMark('{{ student.uuid }}')">Delete</a>

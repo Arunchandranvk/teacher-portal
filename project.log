@@ -43,3 +43,149 @@
 [2025-06-16 00:13:40,332] INFO [app_logger] [LOGOUT] User 'admin' logged out.
 [2025-06-16 00:13:40,337] INFO [django.server] "GET /logout/ HTTP/1.1" 302 0
 [2025-06-16 00:13:40,345] INFO [django.server] "GET / HTTP/1.1" 200 3514
+[2025-06-16 00:55:39,114] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 00:55:45,903] INFO [django.server] "GET /home/ HTTP/1.1" 302 0
+[2025-06-16 00:55:45,903] INFO [django.server] "GET /?next=/home/ HTTP/1.1" 200 3514
+[2025-06-16 00:55:50,009] INFO [app_logger] [LOGIN SUCCESS] User 'admin' logged in.
+[2025-06-16 00:55:50,014] INFO [django.server] "POST / HTTP/1.1" 302 0
+[2025-06-16 00:55:50,028] INFO [django.server] "GET /home/ HTTP/1.1" 200 8572
+[2025-06-16 00:55:50,048] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 304 0
+[2025-06-16 00:55:50,070] INFO [django.server] "GET /static/images/company_logo.jpg HTTP/1.1" 304 0
+[2025-06-16 00:55:51,402] INFO [app_logger] [LOGOUT] User 'admin' logged out.
+[2025-06-16 00:55:51,410] INFO [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 00:55:51,413] INFO [django.server] "GET / HTTP/1.1" 200 3514
+[2025-06-16 00:55:51,430] INFO [django.server] "GET /static/css/login.css HTTP/1.1" 304 0
+[2025-06-16 00:56:18,653] INFO [app_logger] [LOGIN SUCCESS] User 'admin' logged in.
+[2025-06-16 00:56:18,666] INFO [django.server] "POST / HTTP/1.1" 302 0
+[2025-06-16 00:56:18,708] INFO [django.server] "GET /home/ HTTP/1.1" 200 8572
+[2025-06-16 00:56:34,246] INFO [app_logger] [MARK CREATED] New student entry: 'test' with 78 marks in 'Chemistry'.
+[2025-06-16 00:56:34,248] INFO [django.server] "POST /home/ HTTP/1.1" 200 72
+[2025-06-16 00:56:35,356] INFO [django.server] "GET /home/ HTTP/1.1" 200 9156
+[2025-06-16 00:56:50,798] INFO [app_logger] [MARK UPDATED] Existing student 'Akash' updated with +34 marks in 'Chemistry'. Total: 126
+[2025-06-16 00:56:50,800] INFO [django.server] "POST /home/ HTTP/1.1" 200 80
+[2025-06-16 00:56:51,865] INFO [django.server] "GET /home/ HTTP/1.1" 200 9158
+[2025-06-16 00:57:44,431] INFO [app_logger] [STUDENT EDIT] Name updated to 'Arun vk'.
+[2025-06-16 00:57:44,435] INFO [app_logger] [STUDENT EDIT] Subject updated to ID 5.
+[2025-06-16 00:57:44,446] INFO [app_logger] [STUDENT EDIT] Marks updated to 98 for student 'Arun vk'.
+[2025-06-16 00:57:44,449] INFO [django.server] "POST /student/edit/e0e8215a-33a0-41fb-9afd-596953b1b876/ HTTP/1.1" 200 88
+[2025-06-16 00:57:45,520] INFO [django.server] "GET /home/ HTTP/1.1" 200 9158
+[2025-06-16 00:57:49,488] INFO [app_logger] [STUDENT DELETE] Deleting mark for student 'test' and subject 'Chemistry'.
+[2025-06-16 00:57:49,492] INFO [django.server] "POST /student/delete/cb4655fa-9e14-44e0-acdd-fd4ce94db759/ HTTP/1.1" 200 72
+[2025-06-16 00:57:50,545] INFO [django.server] "GET /home/ HTTP/1.1" 200 8574
+[2025-06-16 00:57:53,927] INFO [app_logger] [LOGOUT] User 'admin' logged out.
+[2025-06-16 00:57:53,939] INFO [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 00:57:53,955] INFO [django.server] "GET / HTTP/1.1" 200 3514
+[2025-06-16 00:58:00,252] WARNING [app_logger] [LOGIN FAILED] Invalid credentials for user 'ad'.
+[2025-06-16 00:58:00,263] INFO [django.server] "POST / HTTP/1.1" 200 3578
+[2025-06-16 01:01:03,535] WARNING [app_logger] [LOGIN FAILED] Invalid credentials for user 'ad'.
+[2025-06-16 01:01:03,554] INFO [django.server] "POST / HTTP/1.1" 200 3578
+[2025-06-16 01:01:03,570] INFO [django.server] "GET /static/images/company_logo.jpg HTTP/1.1" 304 0
+[2025-06-16 01:01:06,883] INFO [app_logger] [LOGIN SUCCESS] User 'admin' logged in.
+[2025-06-16 01:01:06,891] INFO [django.server] "POST / HTTP/1.1" 302 0
+[2025-06-16 01:01:06,985] INFO [django.server] "GET /home/ HTTP/1.1" 200 8994
+[2025-06-16 01:02:12,827] INFO [django.server] "GET /home/ HTTP/1.1" 200 8994
+[2025-06-16 01:02:13,038] INFO [django.server] "GET /home/ HTTP/1.1" 200 8994
+[2025-06-16 01:02:13,204] INFO [django.server] "GET /home/ HTTP/1.1" 200 8994
+[2025-06-16 01:02:29,437] INFO [django.server] "GET /home/ HTTP/1.1" 200 8994
+[2025-06-16 01:02:29,640] INFO [django.server] "GET /home/ HTTP/1.1" 200 8994
+[2025-06-16 01:02:29,787] INFO [django.server] "GET /home/ HTTP/1.1" 200 8994
+[2025-06-16 01:02:29,954] INFO [django.server] "GET /home/ HTTP/1.1" 200 8994
+[2025-06-16 01:02:30,112] INFO [django.server] "GET /home/ HTTP/1.1" 200 8994
+[2025-06-16 01:02:36,483] INFO [app_logger] [LOGOUT] User 'admin' logged out.
+[2025-06-16 01:02:36,489] INFO [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 01:02:36,496] INFO [django.server] "GET / HTTP/1.1" 200 3514
+[2025-06-16 01:02:58,654] INFO [app_logger] [LOGIN SUCCESS] User 'admin' logged in.
+[2025-06-16 01:02:58,663] INFO [django.server] "POST / HTTP/1.1" 302 0
+[2025-06-16 01:02:58,710] INFO [django.server] "GET /home/ HTTP/1.1" 200 8994
+[2025-06-16 01:03:15,617] INFO [app_logger] [MARK CREATED] New student entry: 'test' with 88 marks in 'Chemistry'.
+[2025-06-16 01:03:15,617] INFO [django.server] "POST /home/ HTTP/1.1" 200 72
+[2025-06-16 01:03:16,705] INFO [django.server] "GET /home/ HTTP/1.1" 200 9705
+[2025-06-16 01:03:28,673] INFO [app_logger] [MARK UPDATED] Existing student 'Akash' updated with +24 marks in 'Chemistry'. Total: 150
+[2025-06-16 01:03:28,674] INFO [django.server] "POST /home/ HTTP/1.1" 200 80
+[2025-06-16 01:03:29,735] INFO [django.server] "GET /home/ HTTP/1.1" 200 9705
+[2025-06-16 01:03:29,948] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 200 6161
+[2025-06-16 01:03:41,062] INFO [app_logger] [MARK CREATED] New student entry: 'Akash' with 89 marks in 'English'.
+[2025-06-16 01:03:41,065] INFO [django.server] "POST /home/ HTTP/1.1" 200 72
+[2025-06-16 01:03:42,141] INFO [django.server] "GET /home/ HTTP/1.1" 200 10416
+[2025-06-16 01:03:42,206] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 304 0
+[2025-06-16 01:03:58,317] INFO [app_logger] [STUDENT EDIT] Name updated to 'Akash'.
+[2025-06-16 01:03:58,320] INFO [app_logger] [STUDENT EDIT] Subject updated to ID 1.
+[2025-06-16 01:03:58,331] INFO [app_logger] [STUDENT EDIT] Marks updated to 77 for student 'Akash'.
+[2025-06-16 01:03:58,334] INFO [django.server] "POST /student/edit/ee266ac4-e742-4f5a-8cab-fdf1279b7aad/ HTTP/1.1" 200 88
+[2025-06-16 01:03:59,440] INFO [django.server] "GET /home/ HTTP/1.1" 200 10416
+[2025-06-16 01:03:59,487] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 304 0
+[2025-06-16 01:04:05,311] INFO [app_logger] [STUDENT DELETE] Deleting mark for student 'Akash' and subject 'English'.
+[2025-06-16 01:04:05,312] INFO [django.server] "POST /student/delete/ee266ac4-e742-4f5a-8cab-fdf1279b7aad/ HTTP/1.1" 200 72
+[2025-06-16 01:04:06,383] INFO [django.server] "GET /home/ HTTP/1.1" 200 8990
+[2025-06-16 01:04:11,886] INFO [django.server] "GET /home/ HTTP/1.1" 200 8990
+[2025-06-16 01:04:11,962] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 304 0
+[2025-06-16 01:04:51,322] INFO [django.utils.autoreload] E:\Projects\Task\teacher_portal\portal\views.py changed, reloading.
+[2025-06-16 01:04:51,950] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 01:05:11,317] INFO [django.server] "GET /home/ HTTP/1.1" 200 8990
+[2025-06-16 01:05:11,336] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 304 0
+[2025-06-16 01:05:20,667] INFO [app_logger] [MARK CREATED] New student entry: 'test' with 88 marks in 'English'.
+[2025-06-16 01:05:20,667] INFO [django.server] "POST /home/ HTTP/1.1" 200 72
+[2025-06-16 01:05:21,711] INFO [django.server] "GET /home/ HTTP/1.1" 200 9699
+[2025-06-16 01:05:28,784] INFO [app_logger] [STUDENT EDIT] Name updated to 'test'.
+[2025-06-16 01:05:28,784] INFO [app_logger] [STUDENT EDIT] Subject updated to ID 3.
+[2025-06-16 01:05:28,784] ERROR [app_logger] [STUDENT EDIT ERROR] UNIQUE constraint failed: portal_studentmarks.student_id, portal_studentmarks.subject_id
+[2025-06-16 01:05:28,784] WARNING [django.request] Bad Request: /student/edit/cc142ceb-e54d-4e7f-a292-930e656eb716/
+[2025-06-16 01:05:28,784] WARNING [django.server] "POST /student/edit/cc142ceb-e54d-4e7f-a292-930e656eb716/ HTTP/1.1" 400 122
+[2025-06-16 01:07:11,911] INFO [django.utils.autoreload] E:\Projects\Task\teacher_portal\portal\views.py changed, reloading.
+[2025-06-16 01:07:12,415] INFO [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 01:07:48,017] INFO [app_logger] [MARK CREATED] New student entry: 'test' with 111 marks in 'Physics'.
+[2025-06-16 01:07:48,019] INFO [django.server] "POST /home/ HTTP/1.1" 200 72
+[2025-06-16 01:07:49,066] INFO [django.server] "GET /home/ HTTP/1.1" 200 10410
+[2025-06-16 01:07:49,066] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 304 0
+[2025-06-16 01:07:49,086] INFO [django.server] "GET /static/images/company_logo.jpg HTTP/1.1" 304 0
+[2025-06-16 01:08:00,100] WARNING [app_logger] [STUDENT EDIT] Duplicate student 'test' and subject 'English' combination.
+[2025-06-16 01:08:00,100] WARNING [django.request] Bad Request: /student/edit/d4fe3300-a8d5-45ac-8022-990fd7686de4/
+[2025-06-16 01:08:00,100] WARNING [django.server] "POST /student/edit/d4fe3300-a8d5-45ac-8022-990fd7686de4/ HTTP/1.1" 400 87
+[2025-06-16 01:08:04,953] INFO [app_logger] [STUDENT DELETE] Deleting mark for student 'test' and subject 'Physics'.
+[2025-06-16 01:08:04,973] INFO [django.server] "POST /student/delete/d4fe3300-a8d5-45ac-8022-990fd7686de4/ HTTP/1.1" 200 72
+[2025-06-16 01:08:06,004] INFO [django.server] "GET /home/ HTTP/1.1" 200 9699
+[2025-06-16 01:08:06,699] INFO [app_logger] [STUDENT DELETE] Deleting mark for student 'test' and subject 'English'.
+[2025-06-16 01:08:06,708] INFO [django.server] "POST /student/delete/cc142ceb-e54d-4e7f-a292-930e656eb716/ HTTP/1.1" 200 72
+[2025-06-16 01:08:07,726] INFO [django.server] "GET /home/ HTTP/1.1" 200 8990
+[2025-06-16 01:08:12,827] INFO [app_logger] [STUDENT DELETE] Deleting mark for student 'test' and subject 'Chemistry'.
+[2025-06-16 01:08:12,831] INFO [django.server] "POST /student/delete/83adb026-ddb2-4fe3-b34c-182c7755ae9c/ HTTP/1.1" 200 72
+[2025-06-16 01:08:13,857] INFO [django.server] "GET /home/ HTTP/1.1" 200 8279
+[2025-06-16 01:08:22,737] INFO [app_logger] [MARK CREATED] New student entry: 'Akash' with 78 marks in 'Chemistry'.
+[2025-06-16 01:08:22,737] INFO [django.server] "POST /home/ HTTP/1.1" 200 72
+[2025-06-16 01:08:23,763] INFO [django.server] "GET /home/ HTTP/1.1" 200 8992
+[2025-06-16 01:08:23,780] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 304 0
+[2025-06-16 01:08:25,409] INFO [app_logger] [LOGOUT] User 'admin' logged out.
+[2025-06-16 01:08:25,416] INFO [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 01:08:25,423] INFO [django.server] "GET / HTTP/1.1" 200 3514
+[2025-06-16 01:08:25,441] INFO [django.server] "GET /static/css/login.css HTTP/1.1" 304 0
+[2025-06-16 01:08:50,377] INFO [app_logger] [LOGIN SUCCESS] User 'admin' logged in.
+[2025-06-16 01:08:50,399] INFO [django.server] "POST / HTTP/1.1" 302 0
+[2025-06-16 01:08:50,437] INFO [django.server] "GET /home/ HTTP/1.1" 200 8992
+[2025-06-16 01:09:02,722] INFO [app_logger] [MARK CREATED] New student entry: 'test' with 89 marks in 'English'.
+[2025-06-16 01:09:02,724] INFO [django.server] "POST /home/ HTTP/1.1" 200 72
+[2025-06-16 01:09:03,816] INFO [django.server] "GET /home/ HTTP/1.1" 200 9701
+[2025-06-16 01:09:03,896] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 304 0
+[2025-06-16 01:09:16,169] INFO [app_logger] [MARK UPDATED] Existing student 'Akash' updated with +35 marks in 'Chemistry'. Total: 113
+[2025-06-16 01:09:16,170] INFO [django.server] "POST /home/ HTTP/1.1" 200 80
+[2025-06-16 01:09:17,232] INFO [django.server] "GET /home/ HTTP/1.1" 200 9703
+[2025-06-16 01:09:28,888] INFO [app_logger] [MARK CREATED] New student entry: 'test' with 78 marks in 'Chemistry'.
+[2025-06-16 01:09:28,891] INFO [django.server] "POST /home/ HTTP/1.1" 200 72
+[2025-06-16 01:09:29,972] INFO [django.server] "GET /home/ HTTP/1.1" 200 10414
+[2025-06-16 01:09:36,556] WARNING [app_logger] [STUDENT EDIT] Duplicate student 'test' and subject 'English' combination.
+[2025-06-16 01:09:36,558] WARNING [django.request] Bad Request: /student/edit/1e9c8e55-1676-4443-84af-a5466109b03f/
+[2025-06-16 01:09:36,561] WARNING [django.server] "POST /student/edit/1e9c8e55-1676-4443-84af-a5466109b03f/ HTTP/1.1" 400 87
+[2025-06-16 01:09:48,811] INFO [app_logger] [STUDENT EDIT] Updated record: student 'test', subject 'English', marks 95
+[2025-06-16 01:09:48,816] INFO [django.server] "POST /student/edit/f5e39b29-79c7-469f-a3d3-2838dedbffde/ HTTP/1.1" 200 88
+[2025-06-16 01:09:49,903] INFO [django.server] "GET /home/ HTTP/1.1" 200 10414
+[2025-06-16 01:09:49,976] INFO [django.server] "GET /static/css/style.css HTTP/1.1" 304 0
+[2025-06-16 01:09:53,067] INFO [app_logger] [STUDENT DELETE] Deleting mark for student 'test' and subject 'Chemistry'.
+[2025-06-16 01:09:53,082] INFO [django.server] "POST /student/delete/1e9c8e55-1676-4443-84af-a5466109b03f/ HTTP/1.1" 200 72
+[2025-06-16 01:09:54,184] INFO [django.server] "GET /home/ HTTP/1.1" 200 9703
+[2025-06-16 01:09:56,876] INFO [app_logger] [STUDENT DELETE] Deleting mark for student 'test' and subject 'English'.
+[2025-06-16 01:09:56,885] INFO [django.server] "POST /student/delete/f5e39b29-79c7-469f-a3d3-2838dedbffde/ HTTP/1.1" 200 72
+[2025-06-16 01:09:57,961] INFO [django.server] "GET /home/ HTTP/1.1" 200 8994
+[2025-06-16 01:10:00,504] INFO [app_logger] [LOGOUT] User 'admin' logged out.
+[2025-06-16 01:10:00,524] INFO [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 01:10:00,539] INFO [django.server] "GET / HTTP/1.1" 200 3514
+[2025-06-16 01:10:06,077] WARNING [app_logger] [LOGIN FAILED] Invalid credentials for user 'ad'.
+[2025-06-16 01:10:06,080] INFO [django.server] "POST / HTTP/1.1" 200 3578

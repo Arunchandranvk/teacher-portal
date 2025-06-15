@@ -81,33 +81,46 @@ class HomeView(LoginRequiredMixin, TemplateView):
             logger.error(f"[MARK ERROR] Unexpected error: {str(e)}")
             return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
 
-
 @csrf_exempt
 def edit_student_mark(request, mark_id):
     if request.method == "POST":
         try:
             mark = get_object_or_404(StudentMarks, uuid=mark_id)
+
             new_name = request.POST.get('name')
-            if new_name:
-                mark.student.name = new_name
-                mark.student.save()
-                logger.info(f"[STUDENT EDIT] Name updated to '{new_name}'.")
-
             subject_id = request.POST.get('subject_id')
-            if subject_id:
-                mark.subject = get_object_or_404(Subject, id=subject_id)
-                logger.info(f"[STUDENT EDIT] Subject updated to ID {subject_id}.")
+            marks = int(request.POST.get('marks'))
 
-            mark.marks = int(request.POST.get('marks'))
+            if not new_name or not subject_id:
+                logger.warning("[STUDENT EDIT] Missing required fields.")
+                return JsonResponse({'status': 'error', 'message': 'Name and Subject are required.'}, status=400)
+
+            # Get or create student
+            student, _ = Student.objects.get_or_create(name=new_name)
+            subject = get_object_or_404(Subject, id=subject_id)
+
+            # Check for uniqueness (exclude the current mark being edited)
+            existing = StudentMarks.objects.filter(student=student, subject=subject).exclude(uuid=mark.uuid).first()
+            if existing:
+                logger.warning(f"[STUDENT EDIT] Duplicate student '{new_name}' and subject '{subject.subject_name}' combination.")
+                return JsonResponse({'status': 'error', 'message': 'A record already exists for this student and subject.'}, status=400)
+
+            # Update the record
+            mark.student = student
+            mark.subject = subject
+            mark.marks = marks
             mark.save()
 
-            logger.info(f"[STUDENT EDIT] Marks updated to {mark.marks} for student '{mark.student.name}'.")
+            logger.info(f"[STUDENT EDIT] Updated record: student '{student.name}', subject '{subject.subject_name}', marks {marks}")
             return JsonResponse({'status': 'success', 'message': 'Student details updated successfully', 'new_mark': mark.marks})
+
         except Exception as e:
             logger.error(f"[STUDENT EDIT ERROR] {str(e)}")
             return JsonResponse({'status': 'error', 'message': str(e)}, status=400)
+
     logger.warning("[STUDENT EDIT] Invalid request method.")
     return JsonResponse({'status': 'error', 'message': 'Method not allowed'}, status=405)
+
 
 
 @csrf_exempt
@@ -115,8 +128,6 @@ def delete_student_mark(request, mark_id):
     if request.method == "POST":
         try:
             student_mark = get_object_or_404(StudentMarks, uuid=mark_id)
-            stu = Student.objects.get(uuid=student_mark.student.uuid)
-            stu.delete()
             logger.info(f"[STUDENT DELETE] Deleting mark for student '{student_mark.student.name}' and subject '{student_mark.subject.subject_name}'.")
             student_mark.delete()
             return JsonResponse({'status': 'success', 'message': 'Student Details deleted successfully'})
